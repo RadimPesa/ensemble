@@ -38,8 +38,8 @@ RUN make -C /home/ensemble-fit/core/ \
 && chmod u+x /home/ensemble-test/src/make_saxs_curves.py
 
 #Run experiment in /home/ensemble-test/src/
-ENTRYPOINT [/home/ensemble-test/src/run_script_ensemble]
-CMD [-d , /home/ensemble-test/foxs_curves/, -n, 10, -k, 5, -r, 3, --experimentdata, /home/ensemble-test/experimental_data/exp.dat, --output, /home/ensemble-test/results/, --preserve, --verbose, 3, --tolerance, 1]
+ENTRYPOINT ["/home/ensemble-test/src/run_script_ensemble"]
+CMD ["-d" , "/home/ensemble-test/foxs_curves/", "-n", "10", "-k","5","-r","3", "--experimentdata", "/home/ensemble-test/experimental_data/exp.dat","--output","/home/ensemble-test/results/","--preserve","--verbose","3","--tolerance","1"]
 
 
 # COPY ./examples_I/ /home/ensemble-test/examples_I/
